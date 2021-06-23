@@ -1,0 +1,14 @@
+- hosts: remoto
+  gather_facts: False
+  
+  tasks:
+  - name: Exibindo variaveis
+    user: 
+      name: "{{ item.name }}"
+    loop:
+      - name: Aluno1
+        uid: 1020
+      - name: Aluno2
+        uid: 1030
+      - name: Aluno3
+        uid: 1040
