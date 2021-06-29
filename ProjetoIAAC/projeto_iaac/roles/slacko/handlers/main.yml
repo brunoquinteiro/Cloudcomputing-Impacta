@@ -1,0 +1,14 @@
+---
+# handlers file for slacko
+
+- name: "carregar mongodb"
+  systemd:
+    name: mongodb
+    state: stared
+    enabled: yes
+
+- name: "Start slacko-api.service"
+  systemd:
+    name: slacko-api.service
+    state: started
+    enabled: yes
